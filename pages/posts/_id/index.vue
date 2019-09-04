@@ -13,7 +13,7 @@
             <p class="content">Content of the post</p>
         </section>
         <section class="post-feedback">
-            <p>Let me know what you think about the post. Send some mail to <a href="mailto:feedback@website.com"></a></p>
+            <p>Let me know what you think about the post. Send some mail to <a href="mailto:feedback@website.com">feedback@website.com</a></p>
         </section>
     </div>
 </template>
