@@ -1,5 +1,5 @@
 <template>
-    <div class="posts-page">
+    <div>
         <section class="post-list">
         <PostPreview 
         id="1"
@@ -30,12 +30,6 @@ export default {
 </script>
 
 <style scoped>
-.posts-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .post-list {
   display: flex;
   padding: 20px;
