@@ -1,16 +1,16 @@
 <template>
     <div class="single-post-page">
         <section class="post">
-            <h1 class="post-title">Title of the post</h1>
+            <h1 class="post-title">{{loadedPost.title}}</h1>
             <div class="post-details">
                 <div class="post-detail">
-                    Last updated on XXX
+                    Last updated on {{loadedPost.updatedDate}}
                 </div>
                 <div>
-                    Written by NAME
+                    Written by {{loadedPost.author}}
                 </div>
             </div>
-            <p class="content">Content of the post</p>
+            <p class="content">{{loadedPost.content}}</p>
         </section>
         <section class="post-feedback">
             <p>Let me know what you think about the post. Send some mail to <a href="mailto:feedback@website.com">feedback@website.com</a></p>
@@ -19,9 +19,24 @@
 </template>
 
 <script>
-    export default {
-        
+export default {
+    asyncData(context, callback) {
+      setTimeout(() => {
+        callback(null, {
+          loadedPost: { 
+            id: '1',
+            title: 'First Post (ID: ' + context.params.id +')',
+            author: 'Brandon',
+            updatedDate: new Date(),
+            content: 'Text content should go here.',
+            previewText: 'So it has come to my attention recen...', 
+            thumbnail: 'https://source.unsplash.com/featured/?tech' 
+          }
+        });
+        // this.$route.params
+      }, 1000);
     }
+}
 </script>
 
 <style scoped>

@@ -3,6 +3,7 @@
         <section class="new-post-form">
             <AdminPostForm />
         </section>
+        <PostList :posts="loadedPosts"/>
     </div>
 </template>
 
