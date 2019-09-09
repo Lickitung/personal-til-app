@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <section class="intro">
-      <h1>Get the latest tech news!</h1>
+      <h1>Today I learned...</h1>
     </section>
     <PostList :posts="loadedPosts"/>
   </div>
@@ -17,8 +17,8 @@ export default {
     return new Promise(function(resolve, reject) {
       setTimeout(() => resolve({
         loadedPosts: [
-          { id: '1', title: 'First Post', previewText: 'So it has come to my attention recen...', thumbnail: 'https://source.unsplash.com/featured/?tech' },
-          { id: '2', title: 'Second Post', previewText: 'Until recently I has assumed that it w...', thumbnail: 'https://source.unsplash.com/featured/?tech' },
+          { id: '1', title: 'First TIL', previewText: 'So it has come to my attention recen...', thumbnail: 'https://source.unsplash.com/featured/?tech' },
+          { id: '2', title: 'Second TIL', previewText: 'Until recently I has assumed that it w...', thumbnail: 'https://source.unsplash.com/featured/?tech' },
         ]
       }), 1500)
     })

@@ -1,21 +1,20 @@
 <template>
-    <div class="admin-new-post-page">
-        <section class="new-post-form">
-            <AdminPostForm />
-        </section>
-        <PostList :posts="loadedPosts"/>
-    </div>
+  <div class="admin-new-post-page">
+    <section class="new-post-form">
+      <AdminPostForm />
+    </section>
+  </div>
 </template>
 
 <script>
-import AdminPostForm from '@/components/Admin/AdminPostForm'
+import AdminPostForm from "@/components/Admin/AdminPostForm";
 
-    export default {
-        layout: 'admin',
-        components: {
-            AdminPostForm
-        }
-    }
+export default {
+  layout: 'admin',
+  components: {
+    AdminPostForm
+  }
+};
 </script>
 
 <style scoped>
@@ -30,3 +29,4 @@ import AdminPostForm from '@/components/Admin/AdminPostForm'
   }
 }
 </style>
+

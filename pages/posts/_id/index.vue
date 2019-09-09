@@ -25,7 +25,7 @@ export default {
         callback(null, {
           loadedPost: { 
             id: '1',
-            title: 'First Post (ID: ' + context.params.id +')',
+            title: 'First TIL (ID: ' + context.params.id +')',
             author: 'Brandon',
             updatedDate: new Date(),
             content: 'Text content should go here.',
