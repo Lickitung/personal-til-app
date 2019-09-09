@@ -17,7 +17,9 @@ export default {
             { id: '1', title: 'First Post', previewText: 'So it has come to my attention recen...', thumbnail: 'https://source.unsplash.com/featured/?tech' },
             { id: '2', title: 'Second Post', previewText: 'Until recently I has assumed that it w...', thumbnail: 'https://source.unsplash.com/featured/?tech' },
           ]
-        }), 2500)
+        }), 2000);
+      }).catch(e => {
+        context.error(new Error());
       })
     }
 }

@@ -5,10 +5,11 @@
             <div class="post-details">
                 <div class="post-detail">
                     Last updated on {{loadedPost.updatedDate}}
+                    <br>
+                    <br>
+                    - {{loadedPost.author}}
                 </div>
-                <div>
-                    Written by {{loadedPost.author}}
-                </div>
+                
             </div>
             <p class="content">{{loadedPost.content}}</p>
         </section>
