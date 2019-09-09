@@ -11,7 +11,7 @@
                 </div>
                 
             </div>
-            <p class="content">{{loadedPost.content}}</p>
+            <p class="content">{{post.previewText}}</p>
         </section>
         <section class="post-feedback">
             <p>Let me know what you think about the post. Send some mail to <a href="mailto:feedback@website.com">feedback@website.com</a></p>
@@ -21,6 +21,16 @@
 
 <script>
 export default {
+    data() {
+      return {
+        id: this.$route.params.id
+      }
+    },
+    computed: {
+      post () {
+        return this.$store.state.posts.allPosts.find(post => post.id === this.id)
+      }
+    },
     asyncData(context, callback) {
       setTimeout(() => {
         callback(null, {
