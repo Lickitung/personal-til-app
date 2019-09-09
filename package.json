@@ -1,7 +1,7 @@
 {
-  "name": "blog-app",
+  "name": "my-tils",
   "version": "1.0.0",
-  "description": "My praiseworthy Nuxt.js project",
+  "description": "My TIL storage spot",
   "author": "SIeep",
   "private": true,
   "scripts": {
