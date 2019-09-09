@@ -10,7 +10,7 @@ export default {
   components: {
     PostList
   },
-  asyncData() {
+  asyncData(context) {
       return new Promise(function(resolve, reject) {
         setTimeout(() => resolve({
           loadedPosts: [
@@ -18,7 +18,11 @@ export default {
             { id: '2', title: 'Second Post', previewText: 'Until recently I has assumed that it w...', thumbnail: 'https://source.unsplash.com/featured/?tech' },
           ]
         }), 2000);
-      }).catch(e => {
+      })
+      .then(data => {
+        return {data}
+      })
+      .catch(e => {
         context.error(new Error());
       })
     }
